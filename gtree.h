@@ -5,7 +5,8 @@
 #include <stdlib.h>
 #include <string.h>
 
-#define CARACTERES_ACEPTADOS 57
+#define CARACTERES_ACEPTADOS 58
+
 
 typedef struct _GNode {
     struct _GNode *hijos[CARACTERES_ACEPTADOS];
@@ -19,6 +20,8 @@ GTree gtree_crear();
 
 GTree gtree_insertar_string(GTree root, unsigned char* str);
 
+void print_gtree(GTree, unsigned char*, int);
 
+void print_gtree_rec(GTree root);
 
 #endif // __GTREE_H__
